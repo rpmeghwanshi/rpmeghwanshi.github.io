@@ -1,8 +1,6 @@
-# Hi, I'm Ravi Prakash Meghwanshi 👋
+I am a fifth-year Ph.D. student in [Electrical Engineering Department](https://www.iitj.ac.in/electrical-engineering) at [Indian Institute of Technology (IIT), Jodhpur](https://www.iitj.ac.in) supervised by [Dr. Amit Bhardwaj](https://home.iitj.ac.in/~amitb/index.html) and [Dr. Himanshu Kumar](https://sites.google.com/a/iitj.ac.in/himanshu-kumar/)
 
 🎓 PhD Researcher in Haptic Perception & Psychophysics
-
-🏫 [Indian Institute of Technology (IIT), Jodhpur]
 
 🔬 Focus: Multidimensional force perception, perceptual deadzones, machine learning models
 
