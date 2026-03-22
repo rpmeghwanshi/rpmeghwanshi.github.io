@@ -1,7 +1,9 @@
 # Hi, I'm Ravi Prakash Meghwanshi 👋
 
 🎓 PhD Researcher in Haptic Perception & Psychophysics
+
 🏫 [Indian Institute of Technology (IIT), Jodhpur]
+
 🔬 Focus: Multidimensional force perception, perceptual deadzones, machine learning models
 
 ---
@@ -19,7 +21,7 @@
 
 * **A Study of Deadzone Structure for Multi-Dimensional Haptic Force Perception**
   *ACM Transactions on Applied Perception, 2026*
-  https://doi.org/10.1145/3779298
+  (https://doi.org/10.1145/3779298)
 
 ---
 
