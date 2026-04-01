@@ -23,7 +23,7 @@ I am a fifth-year Ph.D. student in [Electrical Engineering Department](https://w
 
 * **Effect of force-rate on continuous kinesthetic force discrimination**
   *Experimental Brain Research, 2025*
-  [https://doi.org/10.1007/s00221-025-07080-1](https://doi.org/10.1007/s00221-025-07080-1)
+  ([https://doi.org/10.1007/s00221-025-07080-1](https://doi.org/10.1007/s00221-025-07080-1))
   
 * **A Study of Deadzone Structure for Multi-Dimensional Haptic Force Perception**
   *ACM Transactions on Applied Perception, 2026*
