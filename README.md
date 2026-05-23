@@ -72,6 +72,7 @@ I am a fifth-year Ph.D. student in [Electrical Engineering Department](https://w
 I’m open to collaborations in:
 
 * Haptics & perception research
+* Psychophyscial studies
 * ML for human sensing
 * Experimental data analysis
 
