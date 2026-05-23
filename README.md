@@ -16,7 +16,7 @@ I am a fifth-year Ph.D. student in [Electrical Engineering Department](https://w
 ## 📄 Publications
 
 * **Effect of Continuous Transition Between Force Stimuli on Haptic Force Discrimination Tasks**
-  *IEEE World Haptics Conference (WHC), 2025* [[PDF](https://doi.org/10.1109/WHC64065.2025.11123225)] [[Slides](WHC_2025_Slides.pdf)]
+  *IEEE World Haptics Conference (WHC), 2025* [[PDF](https://doi.org/10.1109/WHC64065.2025.11123225)] [[Slides](presentations/WHC2025_Slides.pdf)]
 
 * **Effect of force-rate on continuous kinesthetic force discrimination**
   *Experimental Brain Research, 2025*
