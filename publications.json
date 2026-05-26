@@ -1,52 +1,51 @@
 {
   "publications": [
     {
-      "title": "[Paper Title 1]",
+      "title": "Effect of Continuous Transition Between Force Stimuli on Haptic Force Discrimination Tasks",
       "authors": [
-        "Author 1*",
-        "Author 2*",
-        "Author 3",
-        "Author 4",
-        "Author 5",
-        "Author 6",
-        "Author 7",
-        "Author 8",
-        "Author 9",
-        "Author 10",
-        "Author 11†",
-        "Author 12†"
+        "Ravi Prakash Meghwanshi",
+        "Amit Bhardwaj",
+        "Himanshu Kumar"
       ],
-      "venue": "Preprint (2025)",
-      "thumbnail": "images/thumbs/1.jpg",
+      "venue": "IEEE World Haptics Conference (WHC), 2025",
+      "thumbnail": "images/thumbs/whc2025.jpg",
       "selected": 1,
       "award": "",
       "links": {
-        "pdf": "#",
-        "code": "#",
-        "project": "#"
+        "pdf": "https://doi.org/10.1109/WHC64065.2025.11123225",
+        "slides": "presentations/WHC_2025_Slides.pdf"
       }
     },
+
     {
-      "title": "[Paper Title 2]",
+      "title": "Effect of force-rate on continuous kinesthetic force discrimination",
       "authors": [
-        "Author 1*",
-        "Author 2*",
-        "Author 3",
-        "Author 4",
-        "Author 5",
-        "Author 6",
-        "Author 7",
-        "Author 8",
-        "Author 9",
-        "Author 10",
-        "Author 11"
+        "Ravi Prakash Meghwanshi",
+        "Amit Bhardwaj",
+        "Himanshu Kumar"
       ],
-      "venue": "Preprint (2025)",
-      "thumbnail": "images/thumbs/2.jpg",
-      "selected": 0,
+      "venue": "Experimental Brain Research, 2025",
+      "thumbnail": "images/thumbs/ebr2025.jpg",
+      "selected": 1,
       "award": "",
       "links": {
-        "pdf": "#"
+        "pdf": "https://doi.org/10.1007/s00221-025-07080-1"
+      }
+    },
+
+    {
+      "title": "A Study of Deadzone Structure for Multi-Dimensional Haptic Force Perception",
+      "authors": [
+        "Ravi Prakash Meghwanshi",
+        "Amit Bhardwaj",
+        "Himanshu Kumar"
+      ],
+      "venue": "ACM Transactions on Applied Perception, 2026",
+      "thumbnail": "images/thumbs/tap2026.jpg",
+      "selected": 1,
+      "award": "",
+      "links": {
+        "pdf": "https://doi.org/10.1145/3779298"
       }
     }
   ]
