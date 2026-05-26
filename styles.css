@@ -102,6 +102,21 @@ nav a:hover, .social-links-header a:hover {
   margin-right: 0.4rem;
 }
 
+.education-item {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.education-year {
+    min-width: 240px;
+    font-weight: 600;
+    color: #666;
+}
+
+.education-content {
+    line-height: 1.6;
+}
+
 /* Unified animation for elements (not sections) */
 .publication-item, .award-item, .service-category, .misc-item, .news-list li {
   transition: transform var(--transition-time) ease;
