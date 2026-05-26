@@ -164,6 +164,20 @@ function createPublicationElement(publication) {
       projectLink.textContent = '[Project Page]';
       links.appendChild(projectLink);
     }
+
+    if (publication.links.slides) {
+      const slidesLink = document.createElement('a');
+      slidesLink.href = publication.links.slides;
+      slidesLink.textContent = '[Slides]';
+      links.appendChild(slidesLink);
+    }
+
+    if (publication.links.poster) {
+      const posterLink = document.createElement('a');
+      posterLink.href = publication.links.poster;
+      posterLink.textContent = '[Poster]';
+      links.appendChild(posterLink);
+    }
     
     content.appendChild(links);
   }
