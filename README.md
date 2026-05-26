@@ -1,6 +1,6 @@
 I am a fifth-year Ph.D. student in [Electrical Engineering Department](https://www.iitj.ac.in/electrical-engineering) at [Indian Institute of Technology (IIT), Jodhpur](https://www.iitj.ac.in) supervised by [Dr. Amit Bhardwaj](https://home.iitj.ac.in/~amitb/index.html) and [Dr. Himanshu Kumar](https://sites.google.com/a/iitj.ac.in/himanshu-kumar/)
 
-🔬 Research Areas: Multidimensional force perception, perceptual deadzones, machine learning models, Multisensory integration
+🔬 Research Areas: I study human kinesthetic force perception and psychophysics for applications in teleoperation, human–robot interaction, and perception-aware haptic systems.
 
 ---
 
