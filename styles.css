@@ -108,7 +108,7 @@ nav a:hover, .social-links-header a:hover {
 }
 
 .education-year {
-    min-width: 240px;
+    min-width: 180px;
     font-weight: 600;
     color: #666;
 }
