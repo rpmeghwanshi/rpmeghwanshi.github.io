@@ -468,3 +468,8 @@ strong {
     transform: none !important;
   }
 }
+
+.highlight-name {
+    font-weight: 700;
+    color: #8B0000;
+}
