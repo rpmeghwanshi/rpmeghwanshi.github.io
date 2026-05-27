@@ -470,6 +470,6 @@ strong {
 }
 
 .highlight-name {
-    font-weight: 700;
-    color: #8B0000;
+    font-weight: bold !important;
+    color: #8B0000 !important;
 }
