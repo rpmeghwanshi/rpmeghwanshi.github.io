@@ -473,3 +473,21 @@ strong {
     font-weight: bold !important;
     color: #8B0000 !important;
 }
+
+.award-item,
+.activity-item {
+    display: flex;
+    margin-bottom: 18px;
+}
+
+.award-year,
+.activity-year {
+    min-width: 100px;
+    font-weight: 600;
+    color: #666;
+}
+
+.award-desc,
+.activity-desc {
+    line-height: 1.6;
+}
