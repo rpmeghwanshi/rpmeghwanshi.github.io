@@ -491,3 +491,8 @@ strong {
 .activity-desc {
     line-height: 1.6;
 }
+
+.visitor-counter {
+    margin-top: 15px;
+    text-align: center;
+}
