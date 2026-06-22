@@ -27,7 +27,8 @@
       "selected": 1,
       "award": "",
       "links": {
-        "pdf": "https://doi.org/10.1145/3779298"
+        "pdf": "https://doi.org/10.1145/3779298",
+        "poster": "posters/Multi-Dimensional Deadzone.pdf"
       }
     },
     {
@@ -60,7 +61,8 @@
       "selected": 1,
       "award": "",
       "links": {
-        "pdf": "https://doi.org/10.1007/s00221-025-07080-1"
+        "pdf": "https://doi.org/10.1007/s00221-025-07080-1",
+        "poster": "posters/Effect of force-rate.pdf",
       }
     }
   ]
