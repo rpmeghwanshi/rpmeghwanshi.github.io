@@ -1,5 +1,35 @@
 {
   "publications": [
+        {
+      "title": "Perceptual Threshold of Round-Trip Delay in TPTA Systems during Viscoelastic Object Interaction",
+      "authors": [
+        "Ravi Prakash Meghwanshi",
+        "Amit Bhardwaj",
+        "Himanshu Kumar"
+      ],
+      "venue": "ACM Symposium on Applied Perception, 2026",
+      "thumbnail": "images/thumbs/sap2026.JPG",
+      "selected": 1,
+      "award": "",
+      "links": {
+        "pdf": "https://doi.org/10.1145/3821409.3821453"
+      }
+    },
+        {
+      "title": "A Study of Deadzone Structure for Multi-Dimensional Haptic Force Perception",
+      "authors": [
+        "Ravi Prakash Meghwanshi",
+        "Amit Bhardwaj",
+        "Himanshu Kumar"
+      ],
+      "venue": "ACM Transactions on Applied Perception, 2026",
+      "thumbnail": "images/thumbs/tap2026.JPG",
+      "selected": 1,
+      "award": "",
+      "links": {
+        "pdf": "https://doi.org/10.1145/3779298"
+      }
+    },
     {
       "title": "Effect of Continuous Transition Between Force Stimuli on Haptic Force Discrimination Tasks",
       "authors": [
@@ -30,22 +60,6 @@
       "award": "",
       "links": {
         "pdf": "https://doi.org/10.1007/s00221-025-07080-1"
-      }
-    },
-
-    {
-      "title": "A Study of Deadzone Structure for Multi-Dimensional Haptic Force Perception",
-      "authors": [
-        "Ravi Prakash Meghwanshi",
-        "Amit Bhardwaj",
-        "Himanshu Kumar"
-      ],
-      "venue": "ACM Transactions on Applied Perception, 2026",
-      "thumbnail": "images/thumbs/tap2026.JPG",
-      "selected": 1,
-      "award": "",
-      "links": {
-        "pdf": "https://doi.org/10.1145/3779298"
       }
     }
   ]
