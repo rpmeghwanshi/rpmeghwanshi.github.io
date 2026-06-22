@@ -181,7 +181,13 @@ function createPublicationElement(publication) {
       posterLink.textContent = '[Poster]';
       links.appendChild(posterLink);
     }
-    
+    if (publication.links.certificate) {
+      const certLink = document.createElement('a');
+      certLink.href = publication.links.certificate;
+      certLink.textContent = '[Certificate]';
+      certLink.target = '_blank';
+      links.appendChild(certLink);
+    }
     content.appendChild(links);
   }
   
