@@ -28,6 +28,7 @@
       "award": "",
       "links": {
         "pdf": "https://doi.org/10.1145/3779298",
+        "slides": "presentations/EuroHaptics Workshop_ Multi-Dimensional Deadzone.pdf",
         "poster": "posters/Multi-Dimensional Deadzone.pdf"
       }
     },
@@ -62,6 +63,7 @@
       "award": "",
       "links": {
         "pdf": "https://doi.org/10.1007/s00221-025-07080-1",
+        "slides": "presentations/EuroHaptics Workshop_ Effect of Force-Rate.pdf",
         "poster": "posters/Effect of force-rate.pdf"
       }
     }
