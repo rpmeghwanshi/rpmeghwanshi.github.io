@@ -8,11 +8,8 @@
 ═══════════════════════════════════════════ */
 
 let allPublications = [];
-
 let activeType = 'all';
-
 let activeYear = 'all';
-
 
 
 /* ═══════════════════════════════════════════
@@ -21,48 +18,104 @@ let activeYear = 'all';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* Load publications */
-
-    loadPublications();
-
-
-    /* Initialize sidebar navigation */
-
+    // Initialize navigation and scrolling
     initializeNavigation();
 
-
-    /* Initialize publication filters */
-
+    // Initialize publication filters
     initializePublicationFilters();
 
-
-    /* Initialize modal */
-
+    // Initialize image modal
     initializeModal();
+
+    // Load publications
+    loadPublications();
 
 });
 
 
-
 /* ═══════════════════════════════════════════
-   SIDEBAR NAVIGATION
+   SIDEBAR NAVIGATION + SMOOTH SCROLLING
 ═══════════════════════════════════════════ */
 
 function initializeNavigation() {
 
-    const sections = document.querySelectorAll(
-        'section[id], div[id]'
-    );
-
-
-    const navLinks = document.querySelectorAll(
-        '.sidebar-nav a'
-    );
+    const navLinks = document.querySelectorAll('.sidebar-nav a');
 
 
     /* ───────────────────────────────────────
-       Highlight active navigation link
+       SMOOTH SCROLLING
     ─────────────────────────────────────── */
+
+    navLinks.forEach((link) => {
+
+        link.addEventListener('click', function (event) {
+
+            const href = this.getAttribute('href');
+
+            // Only process internal section links
+            if (!href || !href.startsWith('#') || href.length <= 1) {
+                return;
+            }
+
+            event.preventDefault();
+
+            const target = document.querySelector(href);
+
+            if (target) {
+
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+
+                // Update active link immediately
+
+                navLinks.forEach((navLink) => {
+                    navLink.classList.remove('active');
+                });
+
+                this.classList.add('active');
+
+            }
+
+        });
+
+    });
+
+
+    /* ───────────────────────────────────────
+       ACTIVE LINK WHILE SCROLLING
+    ─────────────────────────────────────── */
+
+    const sectionIds = [
+        'home',
+        'about',
+        'education',
+        'publications',
+        'awards',
+        'activities',
+        'contact'
+    ];
+
+
+    const sections = sectionIds
+
+        .map((id) => document.getElementById(id))
+
+        .filter((section) => section !== null);
+
+
+    const observerOptions = {
+
+        root: null,
+
+        rootMargin: '-20% 0px -60% 0px',
+
+        threshold: 0
+
+    };
+
 
     const observer = new IntersectionObserver(
 
@@ -72,21 +125,25 @@ function initializeNavigation() {
 
                 if (entry.isIntersecting) {
 
-                    navLinks.forEach((link) => {
+                    const activeLink = document.querySelector(
 
-                        link.classList.remove('active');
+                        `.sidebar-nav a[href="#${entry.target.id}"]`
+
+                    );
 
 
-                        if (
-                            link.getAttribute('href') ===
-                            '#' + entry.target.id
-                        ) {
+                    if (activeLink) {
 
-                            link.classList.add('active');
+                        navLinks.forEach((link) => {
 
-                        }
+                            link.classList.remove('active');
 
-                    });
+                        });
+
+
+                        activeLink.classList.add('active');
+
+                    }
 
                 }
 
@@ -94,9 +151,7 @@ function initializeNavigation() {
 
         },
 
-        {
-            threshold: 0.35
-        }
+        observerOptions
 
     );
 
@@ -108,54 +163,12 @@ function initializeNavigation() {
     });
 
 
-
-    /* ───────────────────────────────────────
-       Smooth scrolling
-    ─────────────────────────────────────── */
-
-    navLinks.forEach((link) => {
-
-        link.addEventListener('click', (event) => {
-
-            const href = link.getAttribute('href');
-
-
-            if (
-                href &&
-                href.startsWith('#') &&
-                href.length > 1
-            ) {
-
-                event.preventDefault();
-
-
-                const target = document.querySelector(href);
-
-
-                if (target) {
-
-                    target.scrollIntoView({
-
-                        behavior: 'smooth',
-
-                        block: 'start'
-
-                    });
-
-                }
-
-            }
-
-        });
-
-    });
-
-
-
     /* Set Home active initially */
 
     const homeLink = document.querySelector(
+
         '.sidebar-nav a[href="#home"]'
+
     );
 
 
@@ -166,7 +179,6 @@ function initializeNavigation() {
     }
 
 }
-
 
 
 /* ═══════════════════════════════════════════
@@ -188,7 +200,6 @@ function loadPublications() {
                 );
 
             }
-
 
             return response.json();
 
@@ -232,15 +243,16 @@ function loadPublications() {
 }
 
 
-
 /* ═══════════════════════════════════════════
-   PUBLICATION ERROR
+   PUBLICATION ERROR MESSAGE
 ═══════════════════════════════════════════ */
 
 function displayPublicationError() {
 
     const container = document.getElementById(
+
         'publications-container'
+
     );
 
 
@@ -280,7 +292,6 @@ function displayPublicationError() {
 }
 
 
-
 /* ═══════════════════════════════════════════
    INITIALIZE PUBLICATION FILTERS
 ═══════════════════════════════════════════ */
@@ -299,7 +310,7 @@ function initializePublicationFilters() {
         button.addEventListener('click', () => {
 
 
-            /* Remove active class */
+            // Remove active class from all buttons
 
             filterButtons.forEach((btn) => {
 
@@ -308,17 +319,17 @@ function initializePublicationFilters() {
             });
 
 
-            /* Add active class */
+            // Add active class to clicked button
 
             button.classList.add('active');
 
 
-            /* Update filter */
+            // Update publication type
 
             activeType = button.dataset.filter;
 
 
-            /* Re-render publications */
+            // Render publications again
 
             renderPublications();
 
@@ -327,13 +338,14 @@ function initializePublicationFilters() {
     });
 
 
-
     /* ───────────────────────────────────────
        YEAR FILTER
     ─────────────────────────────────────── */
 
     const yearSelect = document.getElementById(
+
         'yearFilter'
+
     );
 
 
@@ -342,7 +354,6 @@ function initializePublicationFilters() {
         yearSelect.addEventListener('change', () => {
 
             activeYear = yearSelect.value;
-
 
             renderPublications();
 
@@ -353,7 +364,6 @@ function initializePublicationFilters() {
 }
 
 
-
 /* ═══════════════════════════════════════════
    DETERMINE PUBLICATION TYPE
 ═══════════════════════════════════════════ */
@@ -362,8 +372,6 @@ function getPublicationType(publication) {
 
     const venue = publication.venue.toLowerCase();
 
-
-    /* Journal */
 
     if (
 
@@ -380,12 +388,9 @@ function getPublicationType(publication) {
     }
 
 
-    /* Conference */
-
     return 'conference';
 
 }
-
 
 
 /* ═══════════════════════════════════════════
@@ -413,7 +418,6 @@ function getPublicationYear(publication) {
 }
 
 
-
 /* ═══════════════════════════════════════════
    FILTER PUBLICATIONS
 ═══════════════════════════════════════════ */
@@ -433,13 +437,11 @@ function getFilteredPublications() {
             getPublicationYear(publication);
 
 
-
         const typeMatch =
 
             activeType === 'all' ||
 
             publicationType === activeType;
-
 
 
         const yearMatch =
@@ -449,13 +451,11 @@ function getFilteredPublications() {
             publicationYear === activeYear;
 
 
-
         return typeMatch && yearMatch;
 
     });
 
 }
-
 
 
 /* ═══════════════════════════════════════════
@@ -480,22 +480,19 @@ function renderPublications() {
     }
 
 
-
-    /* Clear existing publications */
+    // Clear existing publications
 
     publicationsContainer.innerHTML = '';
 
 
-
-    /* Get filtered publications */
+    // Get filtered publications
 
     const publicationsToShow =
 
         getFilteredPublications();
 
 
-
-    /* No publications */
+    // Display message if no publications found
 
     if (publicationsToShow.length === 0) {
 
@@ -531,8 +528,7 @@ function renderPublications() {
     }
 
 
-
-    /* Create publication cards */
+    // Create publication cards
 
     publicationsToShow.forEach((publication) => {
 
@@ -556,7 +552,6 @@ function renderPublications() {
 }
 
 
-
 /* ═══════════════════════════════════════════
    CREATE PUBLICATION ELEMENT
 ═══════════════════════════════════════════ */
@@ -576,7 +571,6 @@ function createPublicationElement(publication) {
         'publication-item';
 
 
-
     /* ═══════════════════════════════════════
        THUMBNAIL
     ═══════════════════════════════════════ */
@@ -589,7 +583,6 @@ function createPublicationElement(publication) {
     thumbnail.className =
 
         'pub-thumbnail';
-
 
 
     const thumbnailImage =
@@ -608,7 +601,6 @@ function createPublicationElement(publication) {
 
 
     thumbnailImage.loading = 'lazy';
-
 
 
     /* Open image modal */
@@ -637,7 +629,6 @@ function createPublicationElement(publication) {
     );
 
 
-
     /* ═══════════════════════════════════════
        PUBLICATION CONTENT
     ═══════════════════════════════════════ */
@@ -650,7 +641,6 @@ function createPublicationElement(publication) {
     content.className =
 
         'pub-content';
-
 
 
     /* ───────────────────────────────────────
@@ -675,7 +665,6 @@ function createPublicationElement(publication) {
     content.appendChild(title);
 
 
-
     /* ───────────────────────────────────────
        AUTHORS
     ─────────────────────────────────────── */
@@ -690,9 +679,7 @@ function createPublicationElement(publication) {
         'pub-authors';
 
 
-
     let authorsHTML = '';
-
 
 
     publication.authors.forEach(
@@ -700,7 +687,7 @@ function createPublicationElement(publication) {
         (author, index) => {
 
 
-            /* Highlight your name */
+            /* Highlight Ravi Prakash Meghwanshi */
 
             if (
 
@@ -727,8 +714,7 @@ function createPublicationElement(publication) {
             }
 
 
-
-            /* Add comma */
+            /* Add comma between authors */
 
             if (
 
@@ -753,7 +739,6 @@ function createPublicationElement(publication) {
     content.appendChild(authors);
 
 
-
     /* ───────────────────────────────────────
        VENUE
     ─────────────────────────────────────── */
@@ -766,7 +751,6 @@ function createPublicationElement(publication) {
     venueContainer.className =
 
         'pub-venue-container';
-
 
 
     const venue =
@@ -785,7 +769,6 @@ function createPublicationElement(publication) {
 
 
     venueContainer.appendChild(venue);
-
 
 
     /* ───────────────────────────────────────
@@ -831,7 +814,6 @@ function createPublicationElement(publication) {
     );
 
 
-
     /* ═══════════════════════════════════════
        PUBLICATION LINKS
     ═══════════════════════════════════════ */
@@ -847,7 +829,6 @@ function createPublicationElement(publication) {
         links.className =
 
             'pub-links';
-
 
 
         /* PDF */
@@ -869,7 +850,6 @@ function createPublicationElement(publication) {
         }
 
 
-
         /* Slides */
 
         if (publication.links.slides) {
@@ -887,7 +867,6 @@ function createPublicationElement(publication) {
             );
 
         }
-
 
 
         /* Poster */
@@ -909,7 +888,6 @@ function createPublicationElement(publication) {
         }
 
 
-
         /* Certificate */
 
         if (publication.links.certificate) {
@@ -927,7 +905,6 @@ function createPublicationElement(publication) {
             );
 
         }
-
 
 
         /* Code */
@@ -949,7 +926,6 @@ function createPublicationElement(publication) {
         }
 
 
-
         /* Project Page */
 
         if (publication.links.project) {
@@ -969,11 +945,9 @@ function createPublicationElement(publication) {
         }
 
 
-
         content.appendChild(links);
 
     }
-
 
 
     /* ═══════════════════════════════════════
@@ -997,7 +971,6 @@ function createPublicationElement(publication) {
     return publicationItem;
 
 }
-
 
 
 /* ═══════════════════════════════════════════
@@ -1031,7 +1004,6 @@ function createPublicationLink(
     link.rel = 'noopener noreferrer';
 
 
-
     /* Add icon */
 
     const icon =
@@ -1040,7 +1012,6 @@ function createPublicationLink(
 
 
     icon.className = iconClass;
-
 
 
     /* Add text */
@@ -1054,7 +1025,6 @@ function createPublicationLink(
         );
 
 
-
     link.appendChild(icon);
 
 
@@ -1064,7 +1034,6 @@ function createPublicationLink(
     container.appendChild(link);
 
 }
-
 
 
 /* ═══════════════════════════════════════════
@@ -1089,8 +1058,7 @@ function initializeModal() {
     }
 
 
-
-    /* Close when clicking background */
+    /* Close modal when clicking background */
 
     modal.addEventListener(
 
@@ -1098,11 +1066,7 @@ function initializeModal() {
 
         (event) => {
 
-            if (
-
-                event.target === modal
-
-            ) {
+            if (event.target === modal) {
 
                 closeModal();
 
@@ -1111,7 +1075,6 @@ function initializeModal() {
         }
 
     );
-
 
 
     /* Close modal with Escape key */
@@ -1139,7 +1102,6 @@ function initializeModal() {
     );
 
 }
-
 
 
 /* ═══════════════════════════════════════════
@@ -1179,12 +1141,10 @@ function openModal(imageSource) {
     }
 
 
-
     modalImage.src = imageSource;
 
 
     modal.style.display = 'block';
-
 
 
     setTimeout(() => {
@@ -1194,7 +1154,6 @@ function openModal(imageSource) {
     }, 10);
 
 }
-
 
 
 /* ═══════════════════════════════════════════
