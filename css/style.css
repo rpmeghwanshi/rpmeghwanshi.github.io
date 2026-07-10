@@ -263,18 +263,12 @@ body {
 
 .main {
     margin-left: var(--sidebar-width);
-
     flex: 1;
-
     background: #ffffff;
-
     color: var(--text-dark);
-
     min-height: 100vh;
-
     padding-bottom: 36px;
-
-    overflow: hidden;
+    overflow: visible;
 }
 
 
@@ -479,8 +473,20 @@ body {
 
 .section {
     margin-bottom: 38px;
+    scroll-margin-top: 30px;
+}
 
-    scroll-margin-top: 20px;
+
+/* Smooth scrolling position for navigation sections */
+
+#home,
+#about,
+#education,
+#publications,
+#awards,
+#activities,
+#contact {
+    scroll-margin-top: 30px;
 }
 
 
