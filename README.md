@@ -1,12 +1,17 @@
-
-## File Structure
-
-```
-.
-├── index.html          # Main webpage
-├── styles.css          # CSS styling
-├── scripts.js          # JavaScript for dynamic content
-├── publications.json   # Publication data
-└── images/            # Image assets
-    └── profile.jpg
-```
+rpmeghwanshi.github.io/
+├── index.html
+├── publications.json
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── main.js
+│
+├── images/
+│   ├── profile.jpg
+│   ├── hero.jpg
+│   └── thumbs/
+│
+├── presentations/
+└── posters/
