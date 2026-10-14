@@ -1,0 +1,139 @@
+{
+  "publications": [
+    {
+      "id": "c3-chi2027",
+      "type": "conference",
+      "year": 2027,
+      "title": "Just Noticeable Difference of SOA for Inter-Finger Apparent Tactile Motion",
+      "authors": [
+        "P. Srivastava",
+        "Ravi Prakash Meghwanshi",
+        "Amit Bhardwaj"
+      ],
+      "venue": "Under review",
+      "thumbnail": "images/thumbs/chi2027.JPG",
+      "selected": 1,
+      "status": "Under Review",
+      "award": "",
+      "links": {}
+    },
+    {
+      "id": "j4-perception2026",
+      "type": "journal",
+      "year": 2026,
+      "title": "Bimodal Material Roughness Perception: Haptic-Sound and Visual-Sound",
+      "authors": [
+        "K. Datta*",
+        "Ravi Prakash Meghwanshi*",
+        "R. Harish",
+        "Amit Bhardwaj"
+      ],
+      "venue": "Under review",
+      "thumbnail": "images/thumbs/textures_figure.png",
+      "selected": 1,
+      "status": "Under Review",
+      "award": "*Equal Contribution",
+      "links": {}
+    },
+    {
+      "id": "j3-thms2026",
+      "type": "journal",
+      "year": 2026,
+      "title": "Perceived Intensity Model of Kinesthetic Force in Two-Dimensional Plane",
+      "authors": [
+        "Ravi Prakash Meghwanshi",
+        "Amit Bhardwaj",
+        "Himanshu Kumar"
+      ],
+      "venue": "Under review",
+      "thumbnail": "images/thumbs/Percevied_intensity_model_new.png",
+      "selected": 1,
+      "status": "Under Review",
+      "award": "",
+      "links": {}
+    },
+    {
+      "id": "c2-sap2026",
+      "type": "conference",
+      "year": 2026,
+      "title": "Perceptual Threshold of Round-Trip Delay in TPTA Systems during Viscoelastic Object Interaction",
+      "authors": [
+        "Ravi Prakash Meghwanshi",
+        "Amit Bhardwaj",
+        "Himanshu Kumar"
+      ],
+      "venue": "Proceedings of the 2026 ACM Symposium on Applied Perception (SAP), pp. 1-5, 2026",
+      "thumbnail": "images/thumbs/sap2026.PNG",
+      "selected": 1,
+      "status": "Published",
+      "award": "Oral Presentation · ACM SAP 2026 (France)",
+      "links": {
+        "pdf": "https://doi.org/10.1145/3821409.3821453",
+        "slides": "presentations/ACM_SAP_2026_PPT.pdf"
+      }
+    },
+    {
+      "id": "j2-tap2026",
+      "type": "journal",
+      "year": 2026,
+      "title": "A Study of Deadzone Structure for Multi-Dimensional Haptic Force Perception",
+      "authors": [
+        "Ravi Prakash Meghwanshi",
+        "Amit Bhardwaj",
+        "Himanshu Kumar"
+      ],
+      "venue": "ACM Transactions on Applied Perception, 23(2), pp. 1–18, 2026",
+      "thumbnail": "images/thumbs/tap2026.JPG",
+      "selected": 1,
+      "status": "Published",
+      "award": "",
+      "links": {
+        "pdf": "https://doi.org/10.1145/3779298",
+        "slides": "presentations/EuroHaptics Workshop_ Multi-Dimensional Deadzone.pdf",
+        "poster": "posters/Multi-Dimensional Deadzone.pdf"
+      }
+    },
+    {
+      "id": "c1-whc2025",
+      "type": "conference",
+      "year": 2025,
+      "title": "Effect of Continuous Transition Between Force Stimuli on Haptic Force Discrimination Tasks",
+      "authors": [
+        "Ravi Prakash Meghwanshi",
+        "Amit Bhardwaj",
+        "Himanshu Kumar"
+      ],
+      "venue": "2025 IEEE World Haptics Conference (WHC), pp. 71-77, Suwon, Korea, 2025",
+      "thumbnail": "images/thumbs/whc2025.JPG",
+      "selected": 1,
+      "status": "Published",
+      "award": "Oral Presentation · IEEE WHC 2025 (Korea)",
+      "links": {
+        "pdf": "https://doi.org/10.1109/WHC64065.2025.11123225",
+        "slides": "presentations/WHC_2025_Slides.pdf",
+        "certificate": "images/thumbs/whc_certificate.JPG"
+      }
+    },
+    {
+      "id": "j1-ebr2025",
+      "type": "journal",
+      "year": 2025,
+      "title": "Effect of force-rate on continuous kinesthetic force discrimination",
+      "authors": [
+        "Ravi Prakash Meghwanshi",
+        "Amit Bhardwaj",
+        "Himanshu Kumar"
+      ],
+      "venue": "Experimental Brain Research, 243(5), 118, 2025",
+      "thumbnail": "images/thumbs/ebr2025.JPG",
+      "selected": 1,
+      "status": "Published",
+      "award": "",
+      "links": {
+        "pdf": "https://doi.org/10.1007/s00221-025-07080-1",
+        "slides": "presentations/EuroHaptics Workshop_ Effect of Force-Rate.pdf",
+        "poster": "posters/Effect of force-rate.pdf"
+      }
+    }
+  ]
+}
