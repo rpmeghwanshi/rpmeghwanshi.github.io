@@ -691,31 +691,26 @@ function createPublicationElement(publication) {
     ─────────────────────────────────────── */
 
     const venueContainer =
-
         document.createElement('div');
-
 
     venueContainer.className =
-
         'pub-venue-container';
 
+    const isUnderReview = (publication.status && publication.status.toLowerCase().includes('under review')) ||
+                          (publication.venue && publication.venue.toLowerCase().trim() === 'under review');
 
-    const venue =
+    if (publication.venue && !isUnderReview) {
+        const venue =
+            document.createElement('div');
 
-        document.createElement('div');
+        venue.className =
+            'pub-venue';
 
+        venue.textContent =
+            publication.venue;
 
-    venue.className =
-
-        'pub-venue';
-
-
-    venue.textContent =
-
-        publication.venue;
-
-
-    venueContainer.appendChild(venue);
+        venueContainer.appendChild(venue);
+    }
 
 
     /* ───────────────────────────────────────
